@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Drum Kit</title>
+  </head>
+  <body>
+    <div class="keys">
+      <div data-key="65" class="key">
+        <kbd>A</kbd><span class="sound">Sound 1</span>
+      </div>
+      <div data-key="90" class="key">
+        <kbd>Z</kbd><span class="sound">Sound 2</span>
+      </div>
+      <div data-key="69" class="key">
+        <kbd>E</kbd><span class="sound">Sound 3</span>
+      </div>
+      <div data-key="82" class="key">
+        <kbd>R</kbd><span class="sound">Sound 4</span>
+      </div>
+    </div>
+
+    <audio data-key="65" src="audio/21611.mp3"></audio>
+    <audio data-key="90" src="audio/7528.mp3"></audio>
+    <audio data-key="69" src="audio/8943.mp3"></audio>
+    <audio data-key="82" src="audio/9280.mp3"></audio>
+    <script src="app.js"></script>
+  </body>
+</html>
