@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="range" name="pro" min="0" max="100" value="0" />
+    <progress value="0" max="100" name="progress">progress</progress>
+    <script>
+      const progress = document.querySelector("progress");
+      const range = document.querySelector("input");
+
+      function handleChange() {
+        // progress.value = range.value;
+      }
+
+      window.setTimeout((progress.value = 0), 1000);
+      window.setTimeout((progress.value = 100), 5000);
+
+      range.addEventListener("change", handleChange);
+      range.addEventListener("mousemove", handleChange);
+    </script>
+  </body>
+</html>

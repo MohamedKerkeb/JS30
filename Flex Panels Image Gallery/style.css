@@ -1,0 +1,94 @@
+html {
+  box-sizing: border-box;
+  background: pink;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  background: #6b0f9c;
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  transition: font-size 0.7s, flex 0.7s, background 0.2s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.panel1 {
+  background-image: url(https://images.unsplash.com/photo-1509041322357-8a3f9757a475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=628&q=80);
+}
+.panel2 {
+  background-image: url(https://images.unsplash.com/photo-1503899036084-c55cdd92da26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+}
+.panel3 {
+  background-image: url(https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+}
+.panel4 {
+  background-image: url(https://images.unsplash.com/photo-1508062878650-88b52897f298?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80);
+}
+.panel5 {
+  background-image: url(https://images.unsplash.com/photo-1517824488624-8d6e5cdbf991?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+}
+
+/* Flex Children */
+
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
+
+.panel p {
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 3em;
+}
+
+.panel.open {
+  flex: 5;
+  font-size: 40px;
+}
